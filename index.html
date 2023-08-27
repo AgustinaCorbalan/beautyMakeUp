@@ -1,0 +1,77 @@
+<!DOCTYPE html> <!-- Acá le estamos indicando el tipo de documento, que va a ser html, y su versión que está implicita. Es una etiqueta sin cierre-->
+<html lang="es"> <!--etiqueta que engloba todo el documento (es la ultima etiqueta de cierre) y definimos el idioma en español de esta forma ("es"), por defecto está en inglés ("en")-->
+<head> <!--Qué es la etiqueta head? El elemento <head> va a dar información general (metadatos) acerca del documento, incluyendo su título, icono de la web, enlaces a scripts y hojas de estilos, etc. son datos que no son visibles en el cuerpo de la página-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user.scalable=no, initial-scale=1.0 minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./Css/styles.css"> <!--De esta forma, enlazamos el archivo de estilos con la etiqueta link y el atributo "rel" (se usa para definir la relación entre el archivo enlazado y el documento HTML) y el valor "stylesheet" especifica un estilo persistente (que siempre se aplica si están activas las hojas de estilo.) el atributo "type" indica el tipo de lenguaje de hojas de estilo y el atributo "href" hace referencia a la ubicación del archivo, en este caso, carpeta Css y archivo styles.css-->
+    <script src="https://kit.fontawesome.com/b272a29b6f.js" crossorigin="anonymous"></script> <!--Con este script conseguimos acceder a distintos iconos que nos provee otra página, agregando este script podemos utilizar en nuestro html los iconos provistos.-->
+    <title>Beauty MakeUp</title> <!--Acá le damos el titulo a nuestra pagina, que si bien no es visible en el cuerpo de la web, se puede visualizar como "nombre" de la pestaña del navegador-->
+</head>
+<body> <!-- Qué es la etiqueta body? Simplemente es la etiqueta que va a contener toda la parte visible de mi pagina, desde titulos, enlaces, imagenes, etc, absolutamente todo lo que se vea.-->
+    <header> <!--Es la etiqueta de encabezado de la pagina, normalmente contiene el logo, título de la pagina, un buscador etc-->
+    <img src="Images/logo.png" class="logo" width="100" alt="logo"> <!--En este caso dentro del header, agregamos la imagen del logo, con la etiqueta "img" y sus atributos, src"para indicarle la ubicación del archivo", el atributo "class" me ayuda a identificar a uno o más elementos, y permiten no solo a CSS sino también a javascript seleccionar y acceder a través de los selectores de clase o funciones como el método document.getElementsByClassName del DOM. -->
+    </header>
+    <nav class="navBar"> <!--La etiqueta nav (mas conocida como la barra de navegación) permite agrupar enlaces a otras páginas.-->
+    <ul class="menu"> <!-- Con la etiqueta ul de listas desordenadas, podemos generar el listado completo de las diferentes pestañas que va a contenter el menu de navegación en este caso-->
+    <li class="item"><a href="./index.html">Inicio</a></li> <!-- Con la etiqueta li, que se usa tanto con las listas desordenadas como las ordenadas (ol), podemos generar el listado de cada elemento por separado.-->
+    <li class="item"><a href="./Pages/products.html">Productos</a></li> <!--y con la etiqueta "a" (ancla) crea el enlace a otras paginas o archivos con el atributo "href", dentro de la etiqueta ponemos el texto, imagen o lo que quieras y va a generar un hipervinculo, que al hacer click te lleva a la pagina de destino. -->
+    <li class="item"><a href="./Pages/about.html">Sobre Nosotros</a></li>
+    </ul>
+    </nav>
+    <main> <!--La etiqueta "main" se utiliza para agrupar el contenido principal de una página, excluyendo elementos como barra de navegación, anuncios externos, información sobre la página etc y sólo debe haber una etiqueta main por página.-->
+        <div class="title-container"> <!-- la etiqueta div es una forma de separar y agrupar varios contenidos, es decir, divide contenido de bloque, que es contenido de bloque? son los elementos que ocupan todo el ancho de la página o del elemento que lo contiene, por ej: parrafo, h1 al h6, ul, etc. un div, puede contener otra etiqueta div y así sucesivamente, a eso se le llama divs anidados.-->
+        <h1 class="title-h1"> <!--la etiqueta h1 define el título del documento, existen otros, hasta el h6 que definen por ejemplo, subtitulos-->
+        BEAUTY MAKEUP
+        </h1>
+        </div>
+        <section class="introduccion-section"> <!--la etiqueta section, también se usa para dividir el contenido en secciones como div, la diferencia está en la semántica, que quiere decir semantico? que está mejor definido estructuralmente, sirve para ayudar al SEO (poscionamiento en los buscadores) y es una buena práctica estructurar de manera semántica, pero en la parte visual, son practicamente iguales, con la salvedad que el tamaño por ejemplo de un h1 en un div es un poco más grande que en section. Ambos dividen el contenido por secciones, lo único que div es más generico. -->
+        <article class="p-container"> <!-- Se utiliza para definir un contenido independiente, debe tener su propio significado y ser fácilmente diferenciable del resto del contenido de la página-->
+            <p class="p-introduccion"> <!--La etiqueta p, es la etiqueta de párrafo, dentro debe contener texto.-->
+            En Beauty, creemos que el maquillaje es más que simplemente resaltar rasgos; es una forma de expresión artística. Te invitamos a unirte a nosotros en este emocionante viaje de autodescubrimiento y empoderamiento a medida que descubres tu belleza única. ¡Explora, experimenta y diviértete!
+            </p>
+        </article>
+        </section>
+        <button type="button" class="contact-btn" id="contact-button"> <!--La etiqueta button, define un botón en el que se puede hacer click .-->ESCRIBÍNOS!</button>
+        <section class="modal-container">
+    <div class="modal">
+    <h2 class="contact">CONTACTO</h2>
+    <!--Los formularios son elementos que nos sirven para recopilar informacion que ingresa el usuario y enviarla al servidor para que se pueda procesar y así por ejemplo, guardarse en una base de datos-->
+    <button class="close-form" id="close-button">X</button>
+    <form class="formulario" action="./Pages/form.html" method="GET">
+    <div class="input-container">
+    <input id="name" type="text" placeholder="nombre" name="name" required><!-- los elementos INPUT representan los campos de entrada de datos, son los que nos permiten recuperar información del usuario, hay varios tipos-->
+    <!-- el atributo type, indica el tipo de campo de entrada de datos que vamos a utilizar en este caso "texto" osea el usuario unicamente puede ingresar texto.
+    id, es el identificador del input. Es importante ya que será el nombre por el cual podremos identificar al input.
+    name, es el nombre del campo el cual se enviará desde el formulario al servidor, en este caso es lo que va a aparecer en el parametro de la url si usamos el metodo GET. y required, quiere decir que el campo es obligatorio llenar-->
+    <input type="text" placeholder="apellido" id="lastName" name="lastName"  required>
+    <input id="mail" type="email" placeholder="mail" name="mail" required>
+    <textarea id="comment" placeholder="Deja tu comentario" name="comment"></textarea> <!--esta etiqueta genera un campo de entrada de tipo texto, a diferencia con la etiqueta input, permite crear un cuadro de texto de varias líneas. -->
+    <button class="send-btn" type="submit" id="close-button" onclick="enviarFormulario(event)" >ENVIAR</button> <!-- la etiqueta button de tipo submit, va a enviar los datos del formulario al servidor-->
+    </div>
+    </form>
+    </div>
+    </section>
+    </main>
+    <footer> <!--La etiqueta footer es como un "pie de página", contiene información general sobre el documento, información que se suele poner al final del documento: autor, licencia o condiciones de uso, enlaces a otros documentos relacionados, etc.-->
+        <ul class="icon-list">
+            <li>
+                <a href="https://es-la.facebook.com/" target="_blank"> <!--Ya hablamos sobre la etiqueta a, pero dentro de sus atributos existe "target" que permite especificar el contexto en el que se resuelve el enlace, por ejemplo en este caso con el value _blank, le decimos que al hacer click abra el enlace en una nueva pestaña.-->
+                    <i class="fa-brands fa-facebook fa-2xl" style="color: #412d17;"></i> <!-- Como mencioné más arriba en la etiqueta head, este elemento, fue provisto por el script de fontawesome con sus respectivos estilos, que en este caso son usados de forma inline-style (estilos en linea) sin necesidad de enlazar ningun archivo css. Con este codigo puedo agregar los iconos que quiera, en este caso de redes sociales.-->
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <i class="fa-brands fa-instagram fa-2xl" style="color: #412d17;"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/?lang=es" target="_blank">
+                    <i class="fa-brands fa-x-twitter fa-2xl" style="color: #412d17;"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <script src="./Script/app.js"></script>
+</body>
+</html>
