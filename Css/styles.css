@@ -279,14 +279,14 @@ textarea {
 }
 }
 @media (max-width:370px){
-  .send-btn {
-    position: relative;
-    top: 19px;
-    margin-left: 85px;
-    right: 46px;
+.send-btn {
+  position: relative;
+  top: 19px;
+  margin-left: 85px;
+  right: 46px;
 }
 .formulario {
-  width: 146px;
+  width: 214px;
   display: flex;
   flex-direction: column;
   padding-bottom: 19px;
@@ -327,5 +327,8 @@ form input {
 }
 .contact-btn{
   margin-left: 5em;
+}
+.modal-container .modal{
+  margin:0px;
 }
 }
