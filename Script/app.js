@@ -7,12 +7,12 @@ hay tres formas para crear variables --> con: var, let y const
 breve explicación de cada una: var: puede re-declararse osea, a la variable nombre que declaré puedo modificarla: var nombre = "Marge" (vas a pensar que hay dos variables llamadas igual, pero tranqui que no va a dar ningún error, se va a quedar con la última declara osea la "pisa". 
 Podemos cambiar el valor sin problemas osea: nombre = "Bart".
 Tiene ámbito/contexto global: osea que puedo acceder en cualquier momento y lugar (y por esto ya se dejó de usar, puede generar accidentes en el código) por lo que lo más recomendable es usar let --> 
-  let: no puede re-declararse, si probamos lo mismo que hicimos var vamos a tener este error: "has already been declared" osea ese nombre ya está usado digamos.
-  Puede reasignarse como var. y tiene alcance local o de función.
-  const: no puede re-declararse. pasa lo mismo que con let. 
-  no puede reasignarse. como el nombre lo dice "constante" nunca cambia. Si lo intentamos tenemos un “TypeError: Assignment to constant variable”.
-  y también tiene alcance local o de función. hay más diferencias pero estas son las más importantes.
-  aah importante! javascript, Case Sensitive, osea, diferencia entre mayúsculas y minúsculas, así que ojo con eso! 👀
+let: no puede re-declararse, si probamos lo mismo que hicimos var vamos a tener este error: "has already been declared" osea ese nombre ya está usado digamos.
+Puede reasignarse como var. y tiene alcance local o de función.
+const: no puede re-declararse. pasa lo mismo que con let. 
+no puede reasignarse. como el nombre lo dice "constante" nunca cambia. Si lo intentamos tenemos un “TypeError: Assignment to constant variable”.
+y también tiene alcance local o de función. hay más diferencias pero estas son las más importantes.
+aah importante! javascript, Case Sensitive, osea, diferencia entre mayúsculas y minúsculas, así que ojo con eso! 👀
 
 /*Bueno ahora si*/
 /*Vamos a crear un modal para nuestro formulario de contacto, ¿qué es un modal? es una ventana emergente que se activa cuando el usuario hace clic en un enlace o presiona un botón y no puede interactuar con el fondo hasta que lo cierre*/
@@ -77,6 +77,6 @@ function enviarFormulario(event) {
     inputMail.setAttribute("placeholder", "Ingrese un mail válido");
     inputMail.value = "";
   } else {
-    window.location.href = "../Pages/form.html"; // cuando termina de evaluar todas las condiciones, finalmente devuelve el resultado que sería en este caso, enviar el formulario al enlace seleccionado
+    window.location.replace("./Pages/form.html"); // cuando termina de evaluar todas las condiciones, finalmente devuelve el resultado que sería en este caso, enviar el formulario al enlace seleccionado
   }
 }

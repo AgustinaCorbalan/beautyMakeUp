@@ -220,10 +220,10 @@ textarea{
   border-radius: 3px;
 }
 @media (max-width:600px){
-ul.menu {
+ ul.menu {
   display: contents;
   }
-.info-button {
+ .info-button {
     margin-left: 155px;
   }
   div.title-container h1 {
@@ -276,6 +276,9 @@ textarea {
   position: relative;
   top: 10px;
   border-style: dotted;
+}
+section.construction-section{
+  max-width: 0px;
 }
 }
 @media (max-width:370px){
@@ -331,4 +334,8 @@ form input {
 .modal-container .modal{
   margin:0px;
 }
+section.construction-section{
+  max-width: 0px;
+}
+
 }
