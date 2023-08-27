@@ -205,12 +205,19 @@ textarea{
   top: 29px;
   margin-left: 105px;
   right: 56px;
+  border-radius: 20px;
+  background-color: #7e5d2ebd;
+  color: white;
+  font-weight: bold;
 }
 .close-form{
   position: relative;
   top: -143px;
   left: 209px;
   margin-left: 150px;
+  background-color: #edd3af;
+  color: #452b0e;
+  border-radius: 3px;
 }
 @media (max-width:600px){
 ul.menu {
